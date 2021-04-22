@@ -20,7 +20,6 @@ namespace ElevenNote.Data
             return userIdentity;
         }
     }
-
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
@@ -34,6 +33,7 @@ namespace ElevenNote.Data
         }
 
         public DbSet<Note> Notes { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
